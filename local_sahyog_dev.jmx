@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.6.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan">
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group">
+        <stringProp name="TestPlan.comments">sahyog api testing</stringProp>
+        <intProp name="ThreadGroup.num_threads">100</intProp>
+        <intProp name="ThreadGroup.ramp_time">10</intProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <stringProp name="LoopController.loops">1</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request(get-isFrightBillDay)">
+          <stringProp name="HTTPSampler.domain">new.interworkdev.in</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.path">/app/bill/isItFreightBillDay</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request-Post(generate-token)">
+          <stringProp name="TestPlan.comments">generate auth token</stringProp>
+          <stringProp name="HTTPSampler.domain">new.interworkdev.in</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.path">/app/user/getAuthToken</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;emailId&quot;: &quot;manoj.thakur@shreecement.com&quot;,&#xd;
+    &quot;password&quot;: &quot;Test@123!&quot;,&#xd;
+    &quot;userName&quot;: &quot;manoj.thakur@shreecement.com&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
+            <stringProp name="JSONPostProcessor.referenceNames">access_token</stringProp>
+            <stringProp name="JSONPostProcessor.jsonPathExprs">$.responseMessage</stringProp>
+            <stringProp name="JSONPostProcessor.match_numbers">0</stringProp>
+            <stringProp name="Scope.variable"></stringProp>
+            <stringProp name="JSONPostProcessor.defaultValues">NO_TOKEN</stringProp>
+          </JSONPostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request(create-transporter)">
+          <stringProp name="TestPlan.comments">create transporter</stringProp>
+          <stringProp name="HTTPSampler.domain">new.interworkdev.in</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.path">/app/user/public/transporter/addUpdateTransporters</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">[&#xd;
+    {&#xd;
+        &quot;supplier&quot;: &quot;03070703&quot;,&#xd;
+        &quot;bpGrouping&quot;: &quot;ZTPT&quot;,&#xd;
+        &quot;supplierAccountGroup&quot;: &quot;ZTPT&quot;,&#xd;
+        &quot;name&quot;: &quot;Test01 ROADLINES 13000159&quot;,&#xd;
+        &quot;firstName&quot;: &quot;Test02 ROADLINES 13000159&quot;,&#xd;
+        &quot;lastName&quot;: null,&#xd;
+        &quot;middleName&quot;: null,&#xd;
+        &quot;legalEntity&quot;: &quot;11011557 TRANS SERVICE&quot;,&#xd;
+        &quot;permanentAccountNumber&quot;: &quot;ADLFS5416R&quot;,&#xd;
+        &quot;street&quot;: &quot;OPPOSITE LITILE FLOWER SCHOOL TEST&quot;,&#xd;
+        &quot;houseNumber&quot;: &quot;B-3&quot;,&#xd;
+        &quot;district&quot;: &quot;SURAJPUR&quot;,&#xd;
+        &quot;differentCity&quot;: null,&#xd;
+        &quot;postalCode&quot;: &quot;324008&quot;,&#xd;
+        &quot;city&quot;: &quot;KOTA(KTPS)&quot;,&#xd;
+        &quot;country&quot;: &quot;IN&quot;,&#xd;
+        &quot;state&quot;: &quot;RAJASTHAN&quot;,&#xd;
+        &quot;mobileNumber&quot;: &quot;9999989988&quot;,&#xd;
+        &quot;emailId&quot;: &quot;Test03073@gmail.com&quot;,&#xd;
+        &quot;gstn&quot;: &quot;08ADLFS5406Q2ZB&quot;,&#xd;
+        &quot;taxRegime&quot;: &quot;FCM&quot;,&#xd;
+        &quot;status&quot;: 1,&#xd;
+        &quot;shortCode&quot;: &quot;SUU&quot;,&#xd;
+        &quot;taxCodeDesc&quot;: null,&#xd;
+        &quot;taxRate&quot;: 5&#xd;
+    },&#xd;
+    {&#xd;
+        &quot;supplier&quot;: &quot;03070704&quot;,&#xd;
+        &quot;bpGrouping&quot;: &quot;ZTPT&quot;,&#xd;
+        &quot;supplierAccountGroup&quot;: &quot;ZTPT&quot;,&#xd;
+        &quot;name&quot;: &quot;Test02 ROADLINES 13000159&quot;,&#xd;
+        &quot;firstName&quot;: &quot;Test02 ROADLINES 13000159&quot;,&#xd;
+        &quot;lastName&quot;: null,&#xd;
+        &quot;middleName&quot;: null,&#xd;
+        &quot;legalEntity&quot;: &quot;11011557 TRANS SERVICE&quot;,&#xd;
+        &quot;permanentAccountNumber&quot;: &quot;ADLFS5416R&quot;,&#xd;
+        &quot;street&quot;: &quot;OPPOSITE LITILE FLOWER SCHOOL TEST&quot;,&#xd;
+        &quot;houseNumber&quot;: &quot;B-3&quot;,&#xd;
+        &quot;district&quot;: &quot;SURAJPUR&quot;,&#xd;
+        &quot;differentCity&quot;: null,&#xd;
+        &quot;postalCode&quot;: &quot;324008&quot;,&#xd;
+        &quot;city&quot;: &quot;KOTA(KTPS)&quot;,&#xd;
+        &quot;country&quot;: &quot;IN&quot;,&#xd;
+        &quot;state&quot;: &quot;RAJASTHAN&quot;,&#xd;
+        &quot;mobileNumber&quot;: &quot;9998799988&quot;,&#xd;
+        &quot;emailId&quot;: &quot;Test03074@gmail.com&quot;,&#xd;
+        &quot;gstn&quot;: &quot;08ADLFS5406Q2ZB&quot;,&#xd;
+        &quot;taxRegime&quot;: &quot;RCM&quot;,&#xd;
+        &quot;status&quot;: 1,&#xd;
+        &quot;shortCode&quot;: &quot;SUU&quot;,&#xd;
+        &quot;taxCodeDesc&quot;: null,&#xd;
+        &quot;taxRate&quot;: 5&#xd;
+    }&#xd;
+]</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${access_token}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">userName</stringProp>
+                <stringProp name="Header.value">manoj.thakur@shreecement.com</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request(add-grn)">
+          <stringProp name="TestPlan.comments">add grn</stringProp>
+          <stringProp name="HTTPSampler.domain">new.interworkdev.in</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.path">/app/bill/public/addUpdateGRNs</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">[{&#xd;
+        &quot;grn_no&quot;: &quot;0307070210&quot;,&#xd;
+        &quot;grn_date&quot;: &quot;20250403&quot;,&#xd;
+        &quot;grn_type&quot;: &quot;INBOUND&quot;,&#xd;
+        &quot;plant_code&quot;: &quot;1000&quot;,&#xd;
+        &quot;plant_description&quot;: &quot;SCL-Beawar&quot;,&#xd;
+        &quot;material_code&quot;: &quot;11000040&quot;,&#xd;
+        &quot;material_description&quot;: &quot;SILICA SAND&quot;,&#xd;
+        &quot;material_group&quot;: &quot;RMSAND128&quot;,&#xd;
+        &quot;material_group_desc&quot;: &quot;Sand&quot;,&#xd;
+        &quot;transporter_code&quot;: &quot;03070702&quot;,&#xd;
+        &quot;transporter_name&quot;: &quot;TEST&quot;,&#xd;
+        &quot;po_no&quot;: &quot;5555544400&quot;,&#xd;
+        &quot;po_type&quot;: &quot;ZP01&quot;,&#xd;
+        &quot;net_price&quot;: &quot;100000.55&quot;,&#xd;
+        &quot;supplier_no&quot;: &quot;03070702&quot;,&#xd;
+        &quot;supplier_description&quot;: &quot;TEST&quot;,&#xd;
+        &quot;incoterms&quot;: &quot;EXW&quot;,&#xd;
+        &quot;tzone_code&quot;: &quot;RMRJ000238&quot;,&#xd;
+        &quot;from_location&quot;: &quot;KOTA(KTPS)&quot;,&#xd;
+        &quot;vehicle_no&quot;: &quot;RJ07GC9764&quot;,&#xd;
+        &quot;vehicle_type&quot;: &quot;Trailor-Open Body&quot;,&#xd;
+        &quot;ddc_no&quot;: &quot;126834&quot;,&#xd;
+        &quot;token&quot;: &quot;5124025793&quot;,&#xd;
+        &quot;shipment_no&quot;: &quot;0307070210&quot;,&#xd;
+        &quot;shipment_date&quot;: &quot;20250426&quot;,&#xd;
+        &quot;shipment_cost_no&quot;: &quot;1600097376&quot;,&#xd;
+        &quot;shipment_cost&quot;: &quot;10000.20&quot;,&#xd;
+        &quot;shipment_cost_date&quot;: &quot;20250402&quot;,&#xd;
+        &quot;lr_no&quot;: &quot;5400&quot;,&#xd;
+        &quot;lr_date&quot;: &quot;20250403&quot;,&#xd;
+        &quot;desp_date&quot;: &quot;20250402&quot;,&#xd;
+        &quot;disp_qty&quot;: &quot;50.12&quot;,&#xd;
+        &quot;net_qty&quot;: &quot;50.020&quot;,&#xd;
+        &quot;billing_qty&quot;: &quot;50.120&quot;,&#xd;
+        &quot;freight_rate&quot;: &quot;100.00&quot;,&#xd;
+        &quot;trasnporter_ccn_no&quot;: null,&#xd;
+        &quot;trasnporter_ccn_date&quot;: null,&#xd;
+        &quot;ccn_qty&quot;: &quot;0&quot;,&#xd;
+        &quot;ccn_amount&quot;: &quot;0&quot;,&#xd;
+        &quot;tolerance_type&quot;: &quot;Fixed&quot;,&#xd;
+        &quot;tolerance_qty&quot;: &quot;2.50&quot;,&#xd;
+        &quot;net_shortage&quot;: &quot;0.000&quot;,&#xd;
+        &quot;shortage_rate_type&quot;: null,&#xd;
+        &quot;shortage_rate&quot;: &quot;0.00&quot;,&#xd;
+        &quot;shortage_amount&quot;: &quot;0.000&quot;,&#xd;
+        &quot;remark&quot;: &quot;&quot;,&#xd;
+        &quot;status&quot;: &quot;ACTIVE&quot;,&#xd;
+        &quot;delivery_no&quot;: &quot;0307070210&quot;,&#xd;
+        &quot;uom&quot;: &quot;&quot;,&#xd;
+        &quot;po_item&quot;: &quot;10&quot;&#xd;
+    },&#xd;
+{&#xd;
+        &quot;grn_no&quot;: &quot;0307070211&quot;,&#xd;
+        &quot;grn_date&quot;: &quot;20250403&quot;,&#xd;
+        &quot;grn_type&quot;: &quot;STO&quot;,&#xd;
+        &quot;plant_code&quot;: &quot;1000&quot;,&#xd;
+        &quot;plant_description&quot;: &quot;SCL-Beawar&quot;,&#xd;
+        &quot;material_code&quot;: &quot;11000040&quot;,&#xd;
+        &quot;material_description&quot;: &quot;SILICA SAND&quot;,&#xd;
+        &quot;material_group&quot;: &quot;RMSAND128&quot;,&#xd;
+        &quot;material_group_desc&quot;: &quot;Sand&quot;,&#xd;
+        &quot;transporter_code&quot;: &quot;03070702&quot;,&#xd;
+        &quot;transporter_name&quot;: &quot;TEST&quot;,&#xd;
+        &quot;po_no&quot;: &quot;5555544400&quot;,&#xd;
+        &quot;po_type&quot;: &quot;ZP01&quot;,&#xd;
+        &quot;net_price&quot;: &quot;100000.55&quot;,&#xd;
+        &quot;supplier_no&quot;: &quot;03070702&quot;,&#xd;
+        &quot;supplier_description&quot;: &quot;TEST&quot;,&#xd;
+        &quot;incoterms&quot;: &quot;EXW&quot;,&#xd;
+        &quot;tzone_code&quot;: &quot;RMRJ000238&quot;,&#xd;
+        &quot;from_location&quot;: &quot;KOTA(KTPS)&quot;,&#xd;
+        &quot;vehicle_no&quot;: &quot;RJ07GC9764&quot;,&#xd;
+        &quot;vehicle_type&quot;: &quot;Trailor-Open Body&quot;,&#xd;
+        &quot;ddc_no&quot;: &quot;126834&quot;,&#xd;
+        &quot;token&quot;: &quot;5124025793&quot;,&#xd;
+        &quot;shipment_no&quot;: &quot;0307070211&quot;,&#xd;
+        &quot;shipment_date&quot;: &quot;20250426&quot;,&#xd;
+        &quot;shipment_cost_no&quot;: &quot;1600097376&quot;,&#xd;
+        &quot;shipment_cost&quot;: &quot;10000.20&quot;,&#xd;
+        &quot;shipment_cost_date&quot;: &quot;20250402&quot;,&#xd;
+        &quot;lr_no&quot;: &quot;5400&quot;,&#xd;
+        &quot;lr_date&quot;: &quot;20250403&quot;,&#xd;
+        &quot;desp_date&quot;: &quot;20250402&quot;,&#xd;
+        &quot;disp_qty&quot;: &quot;50.12&quot;,&#xd;
+        &quot;net_qty&quot;: &quot;50.020&quot;,&#xd;
+        &quot;billing_qty&quot;: &quot;50.120&quot;,&#xd;
+        &quot;freight_rate&quot;: &quot;100.00&quot;,&#xd;
+        &quot;trasnporter_ccn_no&quot;: null,&#xd;
+        &quot;trasnporter_ccn_date&quot;: null,&#xd;
+        &quot;ccn_qty&quot;: &quot;0&quot;,&#xd;
+        &quot;ccn_amount&quot;: &quot;0&quot;,&#xd;
+        &quot;tolerance_type&quot;: &quot;Fixed&quot;,&#xd;
+        &quot;tolerance_qty&quot;: &quot;2.50&quot;,&#xd;
+        &quot;net_shortage&quot;: &quot;0.000&quot;,&#xd;
+        &quot;shortage_rate_type&quot;: null,&#xd;
+        &quot;shortage_rate&quot;: &quot;0.00&quot;,&#xd;
+        &quot;shortage_amount&quot;: &quot;0.000&quot;,&#xd;
+        &quot;remark&quot;: &quot;&quot;,&#xd;
+        &quot;status&quot;: &quot;ACTIVE&quot;,&#xd;
+        &quot;delivery_no&quot;: &quot;0307070211&quot;,&#xd;
+        &quot;uom&quot;: &quot;&quot;,&#xd;
+        &quot;po_item&quot;: &quot;10&quot;&#xd;
+    },&#xd;
+    {&#xd;
+        &quot;grn_no&quot;: &quot;0307070212&quot;,&#xd;
+        &quot;grn_date&quot;: &quot;20250403&quot;,&#xd;
+        &quot;grn_type&quot;: &quot;INBOUND&quot;,&#xd;
+        &quot;plant_code&quot;: &quot;1000&quot;,&#xd;
+        &quot;plant_description&quot;: &quot;SCL-Beawar&quot;,&#xd;
+        &quot;material_code&quot;: &quot;11000040&quot;,&#xd;
+        &quot;material_description&quot;: &quot;SILICA SAND&quot;,&#xd;
+        &quot;material_group&quot;: &quot;RMSAND128&quot;,&#xd;
+        &quot;material_group_desc&quot;: &quot;Sand&quot;,&#xd;
+        &quot;transporter_code&quot;: &quot;03070702&quot;,&#xd;
+        &quot;transporter_name&quot;: &quot;TEST&quot;,&#xd;
+        &quot;po_no&quot;: &quot;5555544400&quot;,&#xd;
+        &quot;po_type&quot;: &quot;ZP01&quot;,&#xd;
+        &quot;net_price&quot;: &quot;100000.55&quot;,&#xd;
+        &quot;supplier_no&quot;: &quot;03070702&quot;,&#xd;
+        &quot;supplier_description&quot;: &quot;TEST&quot;,&#xd;
+        &quot;incoterms&quot;: &quot;EXW&quot;,&#xd;
+        &quot;tzone_code&quot;: &quot;RMRJ000238&quot;,&#xd;
+        &quot;from_location&quot;: &quot;KOTA(KTPS)&quot;,&#xd;
+        &quot;vehicle_no&quot;: &quot;RJ07GC9764&quot;,&#xd;
+        &quot;vehicle_type&quot;: &quot;Trailor-Open Body&quot;,&#xd;
+        &quot;ddc_no&quot;: &quot;126834&quot;,&#xd;
+        &quot;token&quot;: &quot;5124025793&quot;,&#xd;
+        &quot;shipment_no&quot;: &quot;0307070212&quot;,&#xd;
+        &quot;shipment_date&quot;: &quot;20250426&quot;,&#xd;
+        &quot;shipment_cost_no&quot;: &quot;1600097376&quot;,&#xd;
+        &quot;shipment_cost&quot;: &quot;10000.20&quot;,&#xd;
+        &quot;shipment_cost_date&quot;: &quot;20250402&quot;,&#xd;
+        &quot;lr_no&quot;: &quot;5400&quot;,&#xd;
+        &quot;lr_date&quot;: &quot;20250403&quot;,&#xd;
+        &quot;desp_date&quot;: &quot;20250402&quot;,&#xd;
+        &quot;disp_qty&quot;: &quot;50.12&quot;,&#xd;
+        &quot;net_qty&quot;: &quot;50.020&quot;,&#xd;
+        &quot;billing_qty&quot;: &quot;50.120&quot;,&#xd;
+        &quot;freight_rate&quot;: &quot;100.00&quot;,&#xd;
+        &quot;trasnporter_ccn_no&quot;: null,&#xd;
+        &quot;trasnporter_ccn_date&quot;: null,&#xd;
+        &quot;ccn_qty&quot;: &quot;0&quot;,&#xd;
+        &quot;ccn_amount&quot;: &quot;0&quot;,&#xd;
+        &quot;tolerance_type&quot;: &quot;Fixed&quot;,&#xd;
+        &quot;tolerance_qty&quot;: &quot;2.50&quot;,&#xd;
+        &quot;net_shortage&quot;: &quot;0.000&quot;,&#xd;
+        &quot;shortage_rate_type&quot;: null,&#xd;
+        &quot;shortage_rate&quot;: &quot;0.00&quot;,&#xd;
+        &quot;shortage_amount&quot;: &quot;0.000&quot;,&#xd;
+        &quot;remark&quot;: &quot;&quot;,&#xd;
+        &quot;status&quot;: &quot;ACTIVE&quot;,&#xd;
+        &quot;delivery_no&quot;: &quot;0307070212&quot;,&#xd;
+        &quot;uom&quot;: &quot;&quot;,&#xd;
+        &quot;po_item&quot;: &quot;10&quot;&#xd;
+    },&#xd;
+    {&#xd;
+        &quot;grn_no&quot;: &quot;0307070213&quot;,&#xd;
+        &quot;grn_date&quot;: &quot;20250403&quot;,&#xd;
+        &quot;grn_type&quot;: &quot;STO&quot;,&#xd;
+        &quot;plant_code&quot;: &quot;1000&quot;,&#xd;
+        &quot;plant_description&quot;: &quot;SCL-Beawar&quot;,&#xd;
+        &quot;material_code&quot;: &quot;11000040&quot;,&#xd;
+        &quot;material_description&quot;: &quot;SILICA SAND&quot;,&#xd;
+        &quot;material_group&quot;: &quot;RMSAND128&quot;,&#xd;
+        &quot;material_group_desc&quot;: &quot;Sand&quot;,&#xd;
+        &quot;transporter_code&quot;: &quot;03070702&quot;,&#xd;
+        &quot;transporter_name&quot;: &quot;TEST&quot;,&#xd;
+        &quot;po_no&quot;: &quot;5555544400&quot;,&#xd;
+        &quot;po_type&quot;: &quot;ZP01&quot;,&#xd;
+        &quot;net_price&quot;: &quot;100000.55&quot;,&#xd;
+        &quot;supplier_no&quot;: &quot;03070702&quot;,&#xd;
+        &quot;supplier_description&quot;: &quot;TEST&quot;,&#xd;
+        &quot;incoterms&quot;: &quot;EXW&quot;,&#xd;
+        &quot;tzone_code&quot;: &quot;RMRJ000238&quot;,&#xd;
+        &quot;from_location&quot;: &quot;KOTA(KTPS)&quot;,&#xd;
+        &quot;vehicle_no&quot;: &quot;RJ07GC9764&quot;,&#xd;
+        &quot;vehicle_type&quot;: &quot;Trailor-Open Body&quot;,&#xd;
+        &quot;ddc_no&quot;: &quot;126834&quot;,&#xd;
+        &quot;token&quot;: &quot;5124025793&quot;,&#xd;
+        &quot;shipment_no&quot;: &quot;0307070213&quot;,&#xd;
+        &quot;shipment_date&quot;: &quot;20250426&quot;,&#xd;
+        &quot;shipment_cost_no&quot;: &quot;1600097376&quot;,&#xd;
+        &quot;shipment_cost&quot;: &quot;10000.20&quot;,&#xd;
+        &quot;shipment_cost_date&quot;: &quot;20250402&quot;,&#xd;
+        &quot;lr_no&quot;: &quot;5400&quot;,&#xd;
+        &quot;lr_date&quot;: &quot;20250403&quot;,&#xd;
+        &quot;desp_date&quot;: &quot;20250402&quot;,&#xd;
+        &quot;disp_qty&quot;: &quot;50.12&quot;,&#xd;
+        &quot;net_qty&quot;: &quot;50.020&quot;,&#xd;
+        &quot;billing_qty&quot;: &quot;50.120&quot;,&#xd;
+        &quot;freight_rate&quot;: &quot;100.00&quot;,&#xd;
+        &quot;trasnporter_ccn_no&quot;: null,&#xd;
+        &quot;trasnporter_ccn_date&quot;: null,&#xd;
+        &quot;ccn_qty&quot;: &quot;0&quot;,&#xd;
+        &quot;ccn_amount&quot;: &quot;0&quot;,&#xd;
+        &quot;tolerance_type&quot;: &quot;Fixed&quot;,&#xd;
+        &quot;tolerance_qty&quot;: &quot;2.50&quot;,&#xd;
+        &quot;net_shortage&quot;: &quot;0.000&quot;,&#xd;
+        &quot;shortage_rate_type&quot;: null,&#xd;
+        &quot;shortage_rate&quot;: &quot;0.00&quot;,&#xd;
+        &quot;shortage_amount&quot;: &quot;0.000&quot;,&#xd;
+        &quot;remark&quot;: &quot;&quot;,&#xd;
+        &quot;status&quot;: &quot;ACTIVE&quot;,&#xd;
+        &quot;delivery_no&quot;: &quot;0307070213&quot;,&#xd;
+        &quot;uom&quot;: &quot;&quot;,&#xd;
+        &quot;po_item&quot;: &quot;10&quot;&#xd;
+    },&#xd;
+    {&#xd;
+        &quot;grn_no&quot;: &quot;0307070214&quot;,&#xd;
+        &quot;grn_date&quot;: &quot;20250403&quot;,&#xd;
+        &quot;grn_type&quot;: &quot;STO&quot;,&#xd;
+        &quot;plant_code&quot;: &quot;1000&quot;,&#xd;
+        &quot;plant_description&quot;: &quot;SCL-Beawar&quot;,&#xd;
+        &quot;material_code&quot;: &quot;11000040&quot;,&#xd;
+        &quot;material_description&quot;: &quot;SILICA SAND&quot;,&#xd;
+        &quot;material_group&quot;: &quot;RMSAND128&quot;,&#xd;
+        &quot;material_group_desc&quot;: &quot;Sand&quot;,&#xd;
+        &quot;transporter_code&quot;: &quot;03070702&quot;,&#xd;
+        &quot;transporter_name&quot;: &quot;TEST&quot;,&#xd;
+        &quot;po_no&quot;: &quot;5555544400&quot;,&#xd;
+        &quot;po_type&quot;: &quot;ZP01&quot;,&#xd;
+        &quot;net_price&quot;: &quot;100000.55&quot;,&#xd;
+        &quot;supplier_no&quot;: &quot;03070702&quot;,&#xd;
+        &quot;supplier_description&quot;: &quot;TEST&quot;,&#xd;
+        &quot;incoterms&quot;: &quot;EXW&quot;,&#xd;
+        &quot;tzone_code&quot;: &quot;RMRJ000238&quot;,&#xd;
+        &quot;from_location&quot;: &quot;KOTA(KTPS)&quot;,&#xd;
+        &quot;vehicle_no&quot;: &quot;RJ07GC9764&quot;,&#xd;
+        &quot;vehicle_type&quot;: &quot;Trailor-Open Body&quot;,&#xd;
+        &quot;ddc_no&quot;: &quot;126834&quot;,&#xd;
+        &quot;token&quot;: &quot;5124025793&quot;,&#xd;
+        &quot;shipment_no&quot;: &quot;0307070214&quot;,&#xd;
+        &quot;shipment_date&quot;: &quot;20250426&quot;,&#xd;
+        &quot;shipment_cost_no&quot;: &quot;1600097376&quot;,&#xd;
+        &quot;shipment_cost&quot;: &quot;10000.20&quot;,&#xd;
+        &quot;shipment_cost_date&quot;: &quot;20250402&quot;,&#xd;
+        &quot;lr_no&quot;: &quot;5400&quot;,&#xd;
+        &quot;lr_date&quot;: &quot;20250403&quot;,&#xd;
+        &quot;desp_date&quot;: &quot;20250402&quot;,&#xd;
+        &quot;disp_qty&quot;: &quot;50.12&quot;,&#xd;
+        &quot;net_qty&quot;: &quot;50.020&quot;,&#xd;
+        &quot;billing_qty&quot;: &quot;50.120&quot;,&#xd;
+        &quot;freight_rate&quot;: &quot;100.00&quot;,&#xd;
+        &quot;trasnporter_ccn_no&quot;: null,&#xd;
+        &quot;trasnporter_ccn_date&quot;: null,&#xd;
+        &quot;ccn_qty&quot;: &quot;0&quot;,&#xd;
+        &quot;ccn_amount&quot;: &quot;0&quot;,&#xd;
+        &quot;tolerance_type&quot;: &quot;Fixed&quot;,&#xd;
+        &quot;tolerance_qty&quot;: &quot;2.50&quot;,&#xd;
+        &quot;net_shortage&quot;: &quot;0.000&quot;,&#xd;
+        &quot;shortage_rate_type&quot;: null,&#xd;
+        &quot;shortage_rate&quot;: &quot;0.00&quot;,&#xd;
+        &quot;shortage_amount&quot;: &quot;0.000&quot;,&#xd;
+        &quot;remark&quot;: &quot;&quot;,&#xd;
+        &quot;status&quot;: &quot;ACTIVE&quot;,&#xd;
+        &quot;delivery_no&quot;: &quot;0307070214&quot;,&#xd;
+        &quot;uom&quot;: &quot;&quot;,&#xd;
+        &quot;po_item&quot;: &quot;10&quot;&#xd;
+    },&#xd;
+    {&#xd;
+        &quot;grn_no&quot;: &quot;0307070215&quot;,&#xd;
+        &quot;grn_date&quot;: &quot;20250403&quot;,&#xd;
+        &quot;grn_type&quot;: &quot;STO&quot;,&#xd;
+        &quot;plant_code&quot;: &quot;1000&quot;,&#xd;
+        &quot;plant_description&quot;: &quot;SCL-Beawar&quot;,&#xd;
+        &quot;material_code&quot;: &quot;11000040&quot;,&#xd;
+        &quot;material_description&quot;: &quot;SILICA SAND&quot;,&#xd;
+        &quot;material_group&quot;: &quot;RMSAND128&quot;,&#xd;
+        &quot;material_group_desc&quot;: &quot;Sand&quot;,&#xd;
+        &quot;transporter_code&quot;: &quot;03070702&quot;,&#xd;
+        &quot;transporter_name&quot;: &quot;TEST&quot;,&#xd;
+        &quot;po_no&quot;: &quot;5555544400&quot;,&#xd;
+        &quot;po_type&quot;: &quot;ZP01&quot;,&#xd;
+        &quot;net_price&quot;: &quot;100000.55&quot;,&#xd;
+        &quot;supplier_no&quot;: &quot;03070702&quot;,&#xd;
+        &quot;supplier_description&quot;: &quot;TEST&quot;,&#xd;
+        &quot;incoterms&quot;: &quot;EXW&quot;,&#xd;
+        &quot;tzone_code&quot;: &quot;RMRJ000238&quot;,&#xd;
+        &quot;from_location&quot;: &quot;KOTA(KTPS)&quot;,&#xd;
+        &quot;vehicle_no&quot;: &quot;RJ07GC9764&quot;,&#xd;
+        &quot;vehicle_type&quot;: &quot;Trailor-Open Body&quot;,&#xd;
+        &quot;ddc_no&quot;: &quot;126834&quot;,&#xd;
+        &quot;token&quot;: &quot;5124025793&quot;,&#xd;
+        &quot;shipment_no&quot;: &quot;0307070215&quot;,&#xd;
+        &quot;shipment_date&quot;: &quot;20250426&quot;,&#xd;
+        &quot;shipment_cost_no&quot;: &quot;1600097376&quot;,&#xd;
+        &quot;shipment_cost&quot;: &quot;10000.20&quot;,&#xd;
+        &quot;shipment_cost_date&quot;: &quot;20250402&quot;,&#xd;
+        &quot;lr_no&quot;: &quot;5400&quot;,&#xd;
+        &quot;lr_date&quot;: &quot;20250403&quot;,&#xd;
+        &quot;desp_date&quot;: &quot;20250402&quot;,&#xd;
+        &quot;disp_qty&quot;: &quot;50.12&quot;,&#xd;
+        &quot;net_qty&quot;: &quot;50.020&quot;,&#xd;
+        &quot;billing_qty&quot;: &quot;50.120&quot;,&#xd;
+        &quot;freight_rate&quot;: &quot;100.00&quot;,&#xd;
+        &quot;trasnporter_ccn_no&quot;: null,&#xd;
+        &quot;trasnporter_ccn_date&quot;: null,&#xd;
+        &quot;ccn_qty&quot;: &quot;0&quot;,&#xd;
+        &quot;ccn_amount&quot;: &quot;0&quot;,&#xd;
+        &quot;tolerance_type&quot;: &quot;Fixed&quot;,&#xd;
+        &quot;tolerance_qty&quot;: &quot;2.50&quot;,&#xd;
+        &quot;net_shortage&quot;: &quot;0.000&quot;,&#xd;
+        &quot;shortage_rate_type&quot;: null,&#xd;
+        &quot;shortage_rate&quot;: &quot;0.00&quot;,&#xd;
+        &quot;shortage_amount&quot;: &quot;0.000&quot;,&#xd;
+        &quot;remark&quot;: &quot;less quantity&quot;,&#xd;
+        &quot;status&quot;: &quot;ACTIVE&quot;,&#xd;
+        &quot;delivery_no&quot;: &quot;0307070215&quot;,&#xd;
+        &quot;uom&quot;: &quot;&quot;,&#xd;
+        &quot;po_item&quot;: &quot;10&quot;&#xd;
+    },&#xd;
+    {&#xd;
+        &quot;grn_no&quot;: &quot;0307070216&quot;,&#xd;
+        &quot;grn_date&quot;: &quot;20250403&quot;,&#xd;
+        &quot;grn_type&quot;: &quot;STO&quot;,&#xd;
+        &quot;plant_code&quot;: &quot;1000&quot;,&#xd;
+        &quot;plant_description&quot;: &quot;SCL-Beawar&quot;,&#xd;
+        &quot;material_code&quot;: &quot;11000040&quot;,&#xd;
+        &quot;material_description&quot;: &quot;SILICA SAND&quot;,&#xd;
+        &quot;material_group&quot;: &quot;RMSAND128&quot;,&#xd;
+        &quot;material_group_desc&quot;: &quot;Sand&quot;,&#xd;
+        &quot;transporter_code&quot;: &quot;03070702&quot;,&#xd;
+        &quot;transporter_name&quot;: &quot;TEST&quot;,&#xd;
+        &quot;po_no&quot;: &quot;5555544400&quot;,&#xd;
+        &quot;po_type&quot;: &quot;ZP01&quot;,&#xd;
+        &quot;net_price&quot;: &quot;100000.55&quot;,&#xd;
+        &quot;supplier_no&quot;: &quot;03070702&quot;,&#xd;
+        &quot;supplier_description&quot;: &quot;TEST&quot;,&#xd;
+        &quot;incoterms&quot;: &quot;EXW&quot;,&#xd;
+        &quot;tzone_code&quot;: &quot;RMRJ000238&quot;,&#xd;
+        &quot;from_location&quot;: &quot;KOTA(KTPS)&quot;,&#xd;
+        &quot;vehicle_no&quot;: &quot;RJ07GC9764&quot;,&#xd;
+        &quot;vehicle_type&quot;: &quot;Trailor-Open Body&quot;,&#xd;
+        &quot;ddc_no&quot;: &quot;126834&quot;,&#xd;
+        &quot;token&quot;: &quot;5124025793&quot;,&#xd;
+        &quot;shipment_no&quot;: &quot;0307070216&quot;,&#xd;
+        &quot;shipment_date&quot;: &quot;20250426&quot;,&#xd;
+        &quot;shipment_cost_no&quot;: &quot;1600097376&quot;,&#xd;
+        &quot;shipment_cost&quot;: &quot;10000.20&quot;,&#xd;
+        &quot;shipment_cost_date&quot;: &quot;20250402&quot;,&#xd;
+        &quot;lr_no&quot;: &quot;5400&quot;,&#xd;
+        &quot;lr_date&quot;: &quot;20250403&quot;,&#xd;
+        &quot;desp_date&quot;: &quot;20250402&quot;,&#xd;
+        &quot;disp_qty&quot;: &quot;50.12&quot;,&#xd;
+        &quot;net_qty&quot;: &quot;50.020&quot;,&#xd;
+        &quot;billing_qty&quot;: &quot;50.120&quot;,&#xd;
+        &quot;freight_rate&quot;: &quot;100.00&quot;,&#xd;
+        &quot;trasnporter_ccn_no&quot;: null,&#xd;
+        &quot;trasnporter_ccn_date&quot;: null,&#xd;
+        &quot;ccn_qty&quot;: &quot;0&quot;,&#xd;
+        &quot;ccn_amount&quot;: &quot;0&quot;,&#xd;
+        &quot;tolerance_type&quot;: &quot;Fixed&quot;,&#xd;
+        &quot;tolerance_qty&quot;: &quot;2.50&quot;,&#xd;
+        &quot;net_shortage&quot;: &quot;0.000&quot;,&#xd;
+        &quot;shortage_rate_type&quot;: null,&#xd;
+        &quot;shortage_rate&quot;: &quot;0.00&quot;,&#xd;
+        &quot;shortage_amount&quot;: &quot;0.000&quot;,&#xd;
+        &quot;remark&quot;: &quot;&quot;,&#xd;
+        &quot;status&quot;: &quot;ACTIVE&quot;,&#xd;
+        &quot;delivery_no&quot;: &quot;0307070216&quot;,&#xd;
+        &quot;uom&quot;: &quot;&quot;,&#xd;
+        &quot;po_item&quot;: &quot;10&quot;&#xd;
+    },&#xd;
+    {&#xd;
+        &quot;grn_no&quot;: &quot;0307070217&quot;,&#xd;
+        &quot;grn_date&quot;: &quot;20250403&quot;,&#xd;
+        &quot;grn_type&quot;: &quot;INBOUND&quot;,&#xd;
+        &quot;plant_code&quot;: &quot;1000&quot;,&#xd;
+        &quot;plant_description&quot;: &quot;SCL-Beawar&quot;,&#xd;
+        &quot;material_code&quot;: &quot;11000040&quot;,&#xd;
+        &quot;material_description&quot;: &quot;SILICA SAND&quot;,&#xd;
+        &quot;material_group&quot;: &quot;RMSAND128&quot;,&#xd;
+        &quot;material_group_desc&quot;: &quot;Sand&quot;,&#xd;
+        &quot;transporter_code&quot;: &quot;03070702&quot;,&#xd;
+        &quot;transporter_name&quot;: &quot;TEST&quot;,&#xd;
+        &quot;po_no&quot;: &quot;5555544400&quot;,&#xd;
+        &quot;po_type&quot;: &quot;ZP01&quot;,&#xd;
+        &quot;net_price&quot;: &quot;100000.55&quot;,&#xd;
+        &quot;supplier_no&quot;: &quot;03070702&quot;,&#xd;
+        &quot;supplier_description&quot;: &quot;TEST&quot;,&#xd;
+        &quot;incoterms&quot;: &quot;EXW&quot;,&#xd;
+        &quot;tzone_code&quot;: &quot;RMRJ000238&quot;,&#xd;
+        &quot;from_location&quot;: &quot;KOTA(KTPS)&quot;,&#xd;
+        &quot;vehicle_no&quot;: &quot;RJ07GC9764&quot;,&#xd;
+        &quot;vehicle_type&quot;: &quot;Trailor-Open Body&quot;,&#xd;
+        &quot;ddc_no&quot;: &quot;126834&quot;,&#xd;
+        &quot;token&quot;: &quot;5124025793&quot;,&#xd;
+        &quot;shipment_no&quot;: &quot;0307070217&quot;,&#xd;
+        &quot;shipment_date&quot;: &quot;20250426&quot;,&#xd;
+        &quot;shipment_cost_no&quot;: &quot;1600097376&quot;,&#xd;
+        &quot;shipment_cost&quot;: &quot;10000.20&quot;,&#xd;
+        &quot;shipment_cost_date&quot;: &quot;20250402&quot;,&#xd;
+        &quot;lr_no&quot;: &quot;5400&quot;,&#xd;
+        &quot;lr_date&quot;: &quot;20250403&quot;,&#xd;
+        &quot;desp_date&quot;: &quot;20250402&quot;,&#xd;
+        &quot;disp_qty&quot;: &quot;50.12&quot;,&#xd;
+        &quot;net_qty&quot;: &quot;50.020&quot;,&#xd;
+        &quot;billing_qty&quot;: &quot;50.120&quot;,&#xd;
+        &quot;freight_rate&quot;: &quot;100.00&quot;,&#xd;
+        &quot;trasnporter_ccn_no&quot;: null,&#xd;
+        &quot;trasnporter_ccn_date&quot;: null,&#xd;
+        &quot;ccn_qty&quot;: &quot;0&quot;,&#xd;
+        &quot;ccn_amount&quot;: &quot;0&quot;,&#xd;
+        &quot;tolerance_type&quot;: &quot;Fixed&quot;,&#xd;
+        &quot;tolerance_qty&quot;: &quot;2.50&quot;,&#xd;
+        &quot;net_shortage&quot;: &quot;0.000&quot;,&#xd;
+        &quot;shortage_rate_type&quot;: null,&#xd;
+        &quot;shortage_rate&quot;: &quot;0.00&quot;,&#xd;
+        &quot;shortage_amount&quot;: &quot;0.000&quot;,&#xd;
+        &quot;remark&quot;: &quot;&quot;,&#xd;
+        &quot;status&quot;: &quot;ACTIVE&quot;,&#xd;
+        &quot;delivery_no&quot;: &quot;0307070217&quot;,&#xd;
+        &quot;uom&quot;: &quot;&quot;,&#xd;
+        &quot;po_item&quot;: &quot;10&quot;&#xd;
+    },{&#xd;
+        &quot;grn_no&quot;: &quot;0307070218&quot;,&#xd;
+        &quot;grn_date&quot;: &quot;20250403&quot;,&#xd;
+        &quot;grn_type&quot;: &quot;INBOUND&quot;,&#xd;
+        &quot;plant_code&quot;: &quot;1000&quot;,&#xd;
+        &quot;plant_description&quot;: &quot;SCL-Beawar&quot;,&#xd;
+        &quot;material_code&quot;: &quot;11000040&quot;,&#xd;
+        &quot;material_description&quot;: &quot;SILICA SAND&quot;,&#xd;
+        &quot;material_group&quot;: &quot;RMSAND128&quot;,&#xd;
+        &quot;material_group_desc&quot;: &quot;Sand&quot;,&#xd;
+        &quot;transporter_code&quot;: &quot;03070702&quot;,&#xd;
+        &quot;transporter_name&quot;: &quot;TEST&quot;,&#xd;
+        &quot;po_no&quot;: &quot;5555544400&quot;,&#xd;
+        &quot;po_type&quot;: &quot;ZP01&quot;,&#xd;
+        &quot;net_price&quot;: &quot;100000.55&quot;,&#xd;
+        &quot;supplier_no&quot;: &quot;03070702&quot;,&#xd;
+        &quot;supplier_description&quot;: &quot;TEST&quot;,&#xd;
+        &quot;incoterms&quot;: &quot;EXW&quot;,&#xd;
+        &quot;tzone_code&quot;: &quot;RMRJ000238&quot;,&#xd;
+        &quot;from_location&quot;: &quot;KOTA(KTPS)&quot;,&#xd;
+        &quot;vehicle_no&quot;: &quot;RJ07GC9764&quot;,&#xd;
+        &quot;vehicle_type&quot;: &quot;Trailor-Open Body&quot;,&#xd;
+        &quot;ddc_no&quot;: &quot;126834&quot;,&#xd;
+        &quot;token&quot;: &quot;5124025793&quot;,&#xd;
+        &quot;shipment_no&quot;: &quot;0307070218&quot;,&#xd;
+        &quot;shipment_date&quot;: &quot;20250426&quot;,&#xd;
+        &quot;shipment_cost_no&quot;: &quot;1600097376&quot;,&#xd;
+        &quot;shipment_cost&quot;: &quot;10000.20&quot;,&#xd;
+        &quot;shipment_cost_date&quot;: &quot;20250402&quot;,&#xd;
+        &quot;lr_no&quot;: &quot;5400&quot;,&#xd;
+        &quot;lr_date&quot;: &quot;20250403&quot;,&#xd;
+        &quot;desp_date&quot;: &quot;20250402&quot;,&#xd;
+        &quot;disp_qty&quot;: &quot;50.12&quot;,&#xd;
+        &quot;net_qty&quot;: &quot;50.020&quot;,&#xd;
+        &quot;billing_qty&quot;: &quot;50.120&quot;,&#xd;
+        &quot;freight_rate&quot;: &quot;100.00&quot;,&#xd;
+        &quot;trasnporter_ccn_no&quot;: null,&#xd;
+        &quot;trasnporter_ccn_date&quot;: null,&#xd;
+        &quot;ccn_qty&quot;: &quot;0&quot;,&#xd;
+        &quot;ccn_amount&quot;: &quot;0&quot;,&#xd;
+        &quot;tolerance_type&quot;: &quot;Fixed&quot;,&#xd;
+        &quot;tolerance_qty&quot;: &quot;2.50&quot;,&#xd;
+        &quot;net_shortage&quot;: &quot;0.000&quot;,&#xd;
+        &quot;shortage_rate_type&quot;: null,&#xd;
+        &quot;shortage_rate&quot;: &quot;0.00&quot;,&#xd;
+        &quot;shortage_amount&quot;: &quot;0.000&quot;,&#xd;
+        &quot;remark&quot;: &quot;&quot;,&#xd;
+        &quot;status&quot;: &quot;ACTIVE&quot;,&#xd;
+        &quot;delivery_no&quot;: &quot;0307070218&quot;,&#xd;
+        &quot;uom&quot;: &quot;&quot;,&#xd;
+        &quot;po_item&quot;: &quot;10&quot;&#xd;
+    },&#xd;
+    {&#xd;
+        &quot;grn_no&quot;: &quot;0307070219&quot;,&#xd;
+        &quot;grn_date&quot;: &quot;20250403&quot;,&#xd;
+        &quot;grn_type&quot;: &quot;INBOUND&quot;,&#xd;
+        &quot;plant_code&quot;: &quot;1000&quot;,&#xd;
+        &quot;plant_description&quot;: &quot;SCL-Beawar&quot;,&#xd;
+        &quot;material_code&quot;: &quot;11000040&quot;,&#xd;
+        &quot;material_description&quot;: &quot;SILICA SAND&quot;,&#xd;
+        &quot;material_group&quot;: &quot;RMSAND128&quot;,&#xd;
+        &quot;material_group_desc&quot;: &quot;Sand&quot;,&#xd;
+        &quot;transporter_code&quot;: &quot;03070702&quot;,&#xd;
+        &quot;transporter_name&quot;: &quot;TEST&quot;,&#xd;
+        &quot;po_no&quot;: &quot;5555544400&quot;,&#xd;
+        &quot;po_type&quot;: &quot;ZP01&quot;,&#xd;
+        &quot;net_price&quot;: &quot;100000.55&quot;,&#xd;
+        &quot;supplier_no&quot;: &quot;03070702&quot;,&#xd;
+        &quot;supplier_description&quot;: &quot;TEST&quot;,&#xd;
+        &quot;incoterms&quot;: &quot;EXW&quot;,&#xd;
+        &quot;tzone_code&quot;: &quot;RMRJ000238&quot;,&#xd;
+        &quot;from_location&quot;: &quot;KOTA(KTPS)&quot;,&#xd;
+        &quot;vehicle_no&quot;: &quot;RJ07GC9764&quot;,&#xd;
+        &quot;vehicle_type&quot;: &quot;Trailor-Open Body&quot;,&#xd;
+        &quot;ddc_no&quot;: &quot;126834&quot;,&#xd;
+        &quot;token&quot;: &quot;5124025793&quot;,&#xd;
+        &quot;shipment_no&quot;: &quot;0307070219&quot;,&#xd;
+        &quot;shipment_date&quot;: &quot;20250426&quot;,&#xd;
+        &quot;shipment_cost_no&quot;: &quot;1600097376&quot;,&#xd;
+        &quot;shipment_cost&quot;: &quot;10000.20&quot;,&#xd;
+        &quot;shipment_cost_date&quot;: &quot;20250402&quot;,&#xd;
+        &quot;lr_no&quot;: &quot;5400&quot;,&#xd;
+        &quot;lr_date&quot;: &quot;20250403&quot;,&#xd;
+        &quot;desp_date&quot;: &quot;20250402&quot;,&#xd;
+        &quot;disp_qty&quot;: &quot;50.12&quot;,&#xd;
+        &quot;net_qty&quot;: &quot;50.020&quot;,&#xd;
+        &quot;billing_qty&quot;: &quot;50.120&quot;,&#xd;
+        &quot;freight_rate&quot;: &quot;100.00&quot;,&#xd;
+        &quot;trasnporter_ccn_no&quot;: null,&#xd;
+        &quot;trasnporter_ccn_date&quot;: null,&#xd;
+        &quot;ccn_qty&quot;: &quot;0&quot;,&#xd;
+        &quot;ccn_amount&quot;: &quot;0&quot;,&#xd;
+        &quot;tolerance_type&quot;: &quot;Fixed&quot;,&#xd;
+        &quot;tolerance_qty&quot;: &quot;2.50&quot;,&#xd;
+        &quot;net_shortage&quot;: &quot;0.000&quot;,&#xd;
+        &quot;shortage_rate_type&quot;: null,&#xd;
+        &quot;shortage_rate&quot;: &quot;0.00&quot;,&#xd;
+        &quot;shortage_amount&quot;: &quot;0.000&quot;,&#xd;
+        &quot;remark&quot;: &quot;&quot;,&#xd;
+        &quot;status&quot;: &quot;ACTIVE&quot;,&#xd;
+        &quot;delivery_no&quot;: &quot;0307070219&quot;,&#xd;
+        &quot;uom&quot;: &quot;&quot;,&#xd;
+        &quot;po_item&quot;: &quot;10&quot;&#xd;
+    }]</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${access_token}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">userName</stringProp>
+                <stringProp name="Header.value">manoj.thakur@shreecement.com</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request(add-freightBill)" enabled="false">
+          <stringProp name="TestPlan.comments">add freight bill</stringProp>
+          <stringProp name="HTTPSampler.domain">shreesahyog-inbound-api-gateway-staging.shreecement.com</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.path">/app/bill/freightbill/addFreightBill</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">[&#xd;
+    {&#xd;
+        &quot;grn_id&quot;: &quot;3098&quot;,&#xd;
+        &quot;grn_no&quot;: &quot;2302300012&quot;,&#xd;
+        &quot;plant_code&quot;: &quot;1005&quot;,&#xd;
+        &quot;material_code&quot;: &quot;11000040&quot;,&#xd;
+        &quot;transporter_code&quot;: &quot;23023001&quot;,&#xd;
+        &quot;grn_date&quot;: &quot;2025-05-02T00:00:00.000&quot;,&#xd;
+        &quot;from_location&quot;: &quot;KOTA(KTPS)&quot;,&#xd;
+        &quot;vehicle_no&quot;: &quot;RJ07GC9763&quot;,&#xd;
+        &quot;lr_no&quot;: &quot;5555555560&quot;,&#xd;
+        &quot;lr_date&quot;: &quot;2024-11-02T00:00:00.000&quot;,&#xd;
+        &quot;disp_qty&quot;: 50.00,&#xd;
+        &quot;net_qty&quot;: 5000.00,&#xd;
+        &quot;billing_qty&quot;: 50.00,&#xd;
+        &quot;freight_rate&quot;: 556.00,&#xd;
+        &quot;shipment_cost&quot;: 27772.20,&#xd;
+        &quot;status_id&quot;: 1,&#xd;
+        &quot;user_id&quot;: 77&#xd;
+    }&#xd;
+]&#xd;
+ </stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="false">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${access_token}</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">userName</stringProp>
+                <stringProp name="Header.value">manoj.thakur@shreecement.com</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
